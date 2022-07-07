@@ -1,0 +1,96 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-color: #ffffff;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+.navbar-airbnb h2 {
+  padding-top: 8px;
+  color: black;
+}
+
+.navbar-airbnb {
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
+.navbar-light .navbar-brand {
+  color: rgba(0,0,0,.9);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-control {
+  background-color: #ffffff;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flat-card {
+  width: 100%;
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.flat-card-image {
+  height: 180px;
+  background-position: center;
+  background-size: cover
+}
+
+.flat-card-content {
+  padding: 24px;
+  background-color: #F8F9FA;
+}
+
+.flat-card-actions {
+  position: relative;
+  background-color: inherit;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 16px 24px;
+}
+
+.flat-form {
+  background-color: #F8F9FA;
+  padding: 24px;
+  border-radius: 3px;
+}
+
+.btn {
+  border-radius: 5px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.text-warning {
+  color: yellow;
+}

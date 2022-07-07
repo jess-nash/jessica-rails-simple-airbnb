@@ -1,0 +1,47 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h2>Check out our flats.</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <% if @flats.count == 1 %>
+        <p>We have <%= @flats.count %> flat.</p>
+      <% else %>
+        <p>We have <%= @flats.count %> flats.</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-md-4">
+        <div class="flat-card">
+          <div class="flat-card-image" style="background-image: url(https://images.pexels.com/photos/2459/stairs-home-loft-lifestyle.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)" > <%# IMAGE %>
+          </div>
+          <div class="flat-card-content">
+            <div class="flat-card-name"> <%# CONTENT (name, address, price_per_night, number_of_guests) %>
+              <h4><%= flat.name %></h4>
+            </div>
+            <p><%= flat.address %></p>
+            <div class="flex">
+              <div class="flex">
+                <i class="fa-solid fa-users"></i>
+                <%= flat.number_of_guests %>
+              </div>
+              <div class="flex ms-3">
+                <i class="fa-solid fa-euro-sign"></i>
+                <%= flat.price_per_night %>
+              </div>
+            </div>
+          </div>
+          <div class="flat-card-actions"> <%# ACTIONS (more info, edit, remove) %>
+            <%= link_to "More details", flat_path(flat) %>
+            <%= link_to "Edit", edit_flat_path(flat), class:"ms-3 text-warning" %>
+             <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" }, class:"ms-3 text-danger" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

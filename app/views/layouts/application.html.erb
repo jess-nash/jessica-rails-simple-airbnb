@@ -12,6 +12,30 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-lewagon bg-light">
+      <div class="container-fluid">
+        <%= link_to flats_path, class: "navbar-airbnb" do %>
+          <h2>Simple Airbnb</h2>
+        <% end %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item active">
+                <%# SEARCH BAR %>
+              </li>
+              <li class="nav-item">
+                <%= link_to new_flat_path do %>
+                  <button class="btn btn-outline-primary">Add Flat</button>
+                <% end %>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
